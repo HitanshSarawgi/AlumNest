@@ -1,5 +1,5 @@
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import { AuthProvider } from "@/context/AuthContext";
 import Nav from "@/components/Nav";
@@ -16,7 +16,7 @@ import FavouritesReminder from "@/components/FavouritesReminder";
 export default function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <AuthProvider>
           <Nav />
           <FavouritesReminder />
@@ -33,7 +33,7 @@ export default function App() {
           </Routes>
           <Toaster position="top-right" richColors closeButton />
         </AuthProvider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
